@@ -1,9 +1,9 @@
-console.log(superDigit(1483));
+console.log(superDigit(9875));
 
 function superDigit(num) {
   // if num is a positive number, it is gonna work
   if (typeof num == 'number' && num > 0) {
-    var numStr = parseInt(num) + '';
+    var numStr = parseInt(num).toString();
 
     // if numStr.length > 1, it is gonna work
     while (numStr.length > 1) {
@@ -12,7 +12,7 @@ function superDigit(num) {
       for (const numStrItem of numStr) {
         value += parseInt(numStrItem);
       }
-      numStr = value + '';
+      numStr = value.toString();
     }
     return parseInt(numStr);
   }
